@@ -32,6 +32,7 @@ urlpatterns = patterns('',
                        (r'^regions/(?P<page>\d*)', 'jelenlet.views.hits_regions'),
                        (r'^hits/(?P<page>\d*)', 'jelenlet.views.hits'),
                        (r'^tolower/(?P<table>\w+)/(?P<fro>\d*)/(?P<to>\d*)', 'jelenlet.views.tolower'),
+                       (r'^tcl_regions$', 'jelenlet.regions_api.get_regions'),
     # Example:
     # (r'^foo/', include('foo.urls')),
 

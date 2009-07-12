@@ -19,7 +19,7 @@ class CUser(BaseModel):
     lastlogin = db.DateTimeProperty()
     online = db.BooleanProperty()
     online_time = db.IntegerProperty()
-    
+
 class Hit(BaseModel):
     name = db.StringProperty()
     time = db.DateTimeProperty()
@@ -29,3 +29,14 @@ class Hit(BaseModel):
 class GraphCache(BaseModel):
     url = db.StringProperty()
     graph = db.BlobProperty()
+
+class Country(BaseModel):
+    initials = db.StringProperty()
+    continent = db.StringProperty()
+    name = db.StringProperty()
+    id = db.IntegerProperty()
+
+class Region(BaseModel):
+    name = db.StringProperty()
+    id = db.IntegerProperty()
+    country_id = db.IntegerProperty()
